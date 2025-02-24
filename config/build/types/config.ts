@@ -1,4 +1,3 @@
-import path from "path"
 export type Buildmode = 'production' | 'development'
 
 export interface BuildPaths {
@@ -7,8 +6,15 @@ export interface BuildPaths {
     html: string;
 }
 
+
+export interface BuildEnv {
+    mode: Buildmode;
+    port: number;
+}
+
 export interface BuildOptions {
     mode: Buildmode;
     paths: BuildPaths;
     isDev: boolean;
+    port: number;
 }

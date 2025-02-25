@@ -1,4 +1,4 @@
-// нужен для
+// нужен для classes
 declare module '*.scss' {
     interface IClassNames {
         [className: string]: string

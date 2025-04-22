@@ -1,20 +1,20 @@
 import { Suspense, useContext } from "react";
-import { Route, Routes, Link } from "react-router-dom";
-import { MainPage } from "pages/MainPage";
 import "./styles/index.scss";
 import { useTheme } from "./providers/themeProvider";
-import { AboutPage } from "pages/AboutPage";
 import { classNames } from "shared/lib/helpers/classNames/classNames";
-import { AppRouter } from "./router";
+import { AppRouter } from "./providers/router";
+import { Navbar } from "widgets/Navbar";
+import { ErrorBoundary } from "./types/ErrorBoundary";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
   return (
     <div className={classNames("app", {}, [theme])}>
-      <button onClick={toggleTheme}>TOOGLE</button>
-      <Link to={"/"}>Главная</Link>
-      <Link to={"/about"}>О сайте</Link>
+      <ErrorBoundary fallback={<p>Что-то пошло не так.</p>}>
+        <Navbar />
+      </ErrorBoundary>
       <AppRouter />
+      <button onClick={toggleTheme}>TOOGLE</button>
     </div>
   );
 };

@@ -1,11 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { classNames } from "shared/lib/helpers/classNames/classNames";
-import "./Navbar.module.scss";
-
-interface NavbarProps {
-  className?: string;
-}
+import * as cls from "./Navbar.module.scss";
+import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
 
 interface NavbarProps {
   className?: string;
@@ -13,10 +10,18 @@ interface NavbarProps {
 
 export const Navbar = ({ className }: NavbarProps) => {
   return (
-    <div className={classNames("navbar", {}, [className])}>
-      <div>
-        <Link to={"/"}>Главная</Link>
-        <Link to={"/about"}>О сайте</Link>
+    <div className={classNames(cls.navbar, {}, [className])}>
+      <div className={cls.links}>
+        <AppLink theme={AppLinkTheme.PRIMARY} to={"/"}>
+          Главная
+        </AppLink>
+        <AppLink
+          theme={AppLinkTheme.SECONDARY}
+          to={"/about"}
+          className={cls.mainLink}
+        >
+          О сайте
+        </AppLink>
       </div>
     </div>
   );

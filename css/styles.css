@@ -163,6 +163,9 @@
   }
 }
 @layer utilities {
+  .static {
+    position: static;
+  }
   .place-content-center {
     place-content: center;
   }

@@ -14,13 +14,15 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^22.13.5",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "@types/react-router-dom": "^5.3.3",
     "@types/webpack": "^5.28.5",
     "@types/webpack-dev-server": "^4.7.2",
     "css-loader": "^7.1.2",
-
+    "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.9.2",
     "sass": "^1.85.1",
     "sass-loader": "^16.0.5",
@@ -30,8 +32,7 @@
     "typescript": "^5.7.3",
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.0",
-    "@types/react-router-dom": "^5.3.3"
+    "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.0.8",

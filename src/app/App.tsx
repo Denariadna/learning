@@ -7,14 +7,13 @@ import { Navbar } from "widgets/Navbar";
 import { ErrorBoundary } from "./types/ErrorBoundary";
 
 const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   return (
     <div className={classNames("app", {}, [theme])}>
       <ErrorBoundary fallback={<p>Что-то пошло не так.</p>}>
         <Navbar />
       </ErrorBoundary>
       <AppRouter />
-      <button onClick={toggleTheme}>TOOGLE</button>
     </div>
   );
 };

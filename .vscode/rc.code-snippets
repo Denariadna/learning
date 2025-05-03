@@ -1,0 +1,24 @@
+{
+	"rc": {
+		"scope": "typescript,typescriptreact",
+		"prefix": "rc",
+		"body": [
+			"import { classNames } from 'shared/lib/classNames/classNames';",
+			"import cls from './${TM_FILENAME_BASE}.module.scss';",
+			"",
+			"interface ${TM_FILENAME_BASE}Props {",
+			"\tclassName?: string;",
+			"}",
+			"",
+			"export const ${TM_FILENAME_BASE} = ({ className }: ${TM_FILENAME_BASE}Props) => {",
+			"",
+			"\treturn (",
+			"\t\t<div className={classNames(cls.${TM_FILENAME_BASE}, {}, [className])}>",
+			"\t\t\t$0",
+			"\t\t</div>",
+			"\t);",
+			"};"
+		],
+		"description": "Create a new UI component"
+	}
+}

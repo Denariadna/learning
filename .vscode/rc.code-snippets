@@ -4,7 +4,7 @@
 		"prefix": "rc",
 		"body": [
 			"import { classNames } from 'shared/lib/classNames/classNames';",
-			"import cls from './${TM_FILENAME_BASE}.module.scss';",
+			"import * as cls from './${TM_FILENAME_BASE}.module.scss';",
 			"",
 			"interface ${TM_FILENAME_BASE}Props {",
 			"\tclassName?: string;",

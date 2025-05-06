@@ -14,6 +14,8 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.1",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^22.13.5",
     "@types/react": "^19.0.10",
@@ -21,6 +23,8 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/webpack": "^5.28.5",
     "@types/webpack-dev-server": "^4.7.2",
+    "babel-loader": "^10.0.0",
+    "babel-plugin-i18next-extract": "^1.0.0",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.9.2",

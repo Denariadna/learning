@@ -21,6 +21,7 @@ export default defineConfig([
     plugins: {
       js,
       react: pluginReact,
+      i18n,
     },
     rules: {
       ...pluginReact.configs.recommended.rules,

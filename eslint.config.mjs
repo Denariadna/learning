@@ -26,14 +26,14 @@ export default defineConfig([
     rules: {
       ...pluginReact.configs.recommended.rules,
       "react/jsx-indent": ["error", 2],
-      "indent": ["error", 2],
       "react/jsx-filename-extension": ["error", { extensions: [".jsx", ".tsx"] }],
       "no-unused-vars": "warn",
       "react/react-in-jsx-scope": "off",
+      "max-len": ['error', {"ignoreComments": true}]
     },
     settings: {
       react: {
-        version: "detect", // Автоматически определяет версию React
+        version: "detect",
       },
     },
   },

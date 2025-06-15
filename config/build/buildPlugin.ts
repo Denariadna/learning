@@ -23,9 +23,9 @@ export function buildPlugins({
     }),
 
     new webpack.HotModuleReplacementPlugin(),
-    // new BundleAnalyzerPlugin({
-    //   openAnalyzer: true,
-    // }),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }),
+    // new BundleAnalyzerPlugin(),
   ];
 }

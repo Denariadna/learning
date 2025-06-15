@@ -15,9 +15,11 @@
       "*": ["./src/*"]
     }
   },
+  "types": ["jest", "@testing-library/jest-dom"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": ["src", "./config/jest/setupTest.ts"]
 }

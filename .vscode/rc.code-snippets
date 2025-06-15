@@ -20,5 +20,19 @@
 			"};"
 		],
 		"description": "Create a new UI component"
+	},
+	"testdemo": {
+		"scope": "typescript,typescriptreact,javascript,javascriptreact",
+		"prefix": "test",
+		"body": [
+			"import '@testing-library/jest-dom';",
+			"",
+			"describe('${1:ComponentName}', () => {",
+			"  test('first test', () => {",
+			"    $0",
+			"  });",
+			"});"
+		],
+		"description": "Jest test block with describe/test"
 	}
 }
